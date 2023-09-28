@@ -4,7 +4,7 @@
 
 @layer base{
   button {
-    @apply block bg-blue-500 text-white px-3 py-2 rounded-full;
+    @apply  bg-blue-500 text-white px-5 py-2 rounded-full;
 }
 }
 
@@ -13,6 +13,6 @@
     @apply max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden;
 }
 .button {
-  @apply w-max bg-blue-500 text-white px-3 py-2 rounded-full;
+  @apply  bg-blue-500 text-white px-3 py-2 rounded-full;
 }
 }
