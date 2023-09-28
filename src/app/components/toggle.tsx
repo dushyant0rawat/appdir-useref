@@ -1,7 +1,7 @@
 "use client"
 
 import { useState,useEffect } from "react"
-type toggleProps = { initialIcon: string,toggleIcon:string,
+type toggleProps = { initialIcon: string,toggleIcon?:string,
     onClick:()=>void}
   const ToggleIcon :React.FC<toggleProps>  =  ({initialIcon,toggleIcon,onClick}) => {
   
