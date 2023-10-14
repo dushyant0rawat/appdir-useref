@@ -2,15 +2,10 @@
 import React, { useRef, useState } from "react";
 import ToggleIcon from "../components/toggle";
 export default function Page() {
-  const inputref = useRef<HTMLInputElement>(null);
   const [input, setInput] = useState("");
   const [inputType, setInputType] = useState("password");
   const handleIcon = () => {
-    if (inputref.current) {
-      inputref.current.type =
-        inputref.current.type === "text" ? "password" : "text";
-      setInputType(inputref.current.type);
-    }
+    setInputType((prev) => (prev === "text" ? "password" : "text"));
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,7 +26,6 @@ export default function Page() {
         <input
           className="focus:outline-1 focus:outline-blue-500 px-3 py-2"
           type={inputType}
-          ref={inputref}
           value={input}
           placeholder="testing...."
           onChange={(e) => setInput(e.target.value)}
